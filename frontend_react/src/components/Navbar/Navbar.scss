@@ -1,31 +1,15 @@
 .app__navbar {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background: rgba(48, 67, 74, 0.25);
+    justify-content: flex-end;
+    padding: 2rem;
+    background: rgba(17, 24, 39, 0.25);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(48, 67, 74, 0.18);
     position: fixed;
     z-index: 2;
-}
-
-.app__navbar-logo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    img {
-        width: 90px;
-        height: 20px;
-        border: 2px solid white;
-
-        @media screen and (min-width: 2000px) {
-            width: 180px;
-            height: 40px;
-        }
-    }
 }
 
 .app__navbar-links {
@@ -45,9 +29,11 @@
             flex-direction: column;
             text-transform: uppercase;
             font-weight: 500;
-            transition: all 0.4 ease-in-out;
+            transition: all 0.4s ease-in-out;
             &:hover {
                 color: var(--secondary-color);
+                border-bottom: 2px solid var(--secondary-color);
+                padding-bottom: 2rem;
             }
         }
     }
@@ -65,6 +51,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--secondary-color);
+    color: var(--white-color);
 
     svg {
         width: 70%;
@@ -84,15 +71,13 @@
         justify-content: flex-end;
         align-items: flex-end;
         flex-direction: column;
-        background: url(../../assets/bgWhite.png);
-        background-size: cover;
-        background-repeat: repeat;
-        box-shadow: 0 0 20px rgba(168, 168, 168);
+        background: var(--secondary-color);
+        box-shadow: 0 0 20px rgba(168, 168, 168, 0.18);
         svg {
             width: 35px;
-            height: 70px;
-            color: var(--secondary-color);
-            margin: 0.5rem 1rem;
+            height: 35px;
+            color: var(--white-color);
+            margin: 2.5rem 1rem;
         }
 
         ul {
@@ -115,9 +100,10 @@
                     font-size: 1rem;
                     text-transform: uppercase;
                     font-weight: 500;
-                    transition: all 0.4 ease-in-out;
+                    transition: all 0.4s ease-in-out;
                     &:hover {
-                        color: var(--secondary-color);
+                        border-bottom: 2px solid var(--white-color);
+                        padding-bottom: 5px;
                     }
                 }
             }

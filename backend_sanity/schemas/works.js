@@ -25,11 +25,6 @@ export default {
       type: 'string',
     },
     {
-      name: 'videoLink',
-      title: 'Video Link',
-      type: 'string',
-    },
-    {
       name: 'imgUrl',
       title: 'ImageUrl',
       type: 'image',

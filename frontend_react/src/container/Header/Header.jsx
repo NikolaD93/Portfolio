@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {AppWrap} from '../../wrapper';
+import { AppWrap } from "../../wrapper";
 
 import { images } from "../../constants";
 import "./Header.scss";
@@ -28,7 +28,9 @@ const Header = () => (
           <span>👋</span>
           <div style={{ marginLeft: 20 }}>
             <p className="p-text">Hello, I am</p>
-            <h1 className="head-text">Nikola</h1>
+            <h1 style={{ fontWeight: 800 }} className="head-text">
+              Nikola
+            </h1>
             <p className="p-text">Frontend Developer</p>
           </div>
         </div>
@@ -39,7 +41,9 @@ const Header = () => (
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <a href={images.resume} download>Resume</a>
+            <a href={images.resume} download>
+              Resume
+            </a>
           </motion.button>
           <motion.button
             className="btn-cmp app__flex"
@@ -79,4 +83,4 @@ const Header = () => (
   </div>
 );
 
-export default AppWrap(Header, 'home');
+export default AppWrap(Header, "home");

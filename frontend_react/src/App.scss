@@ -53,7 +53,7 @@
 
 .head-text {
     font-size: 3.2rem;
-    font-weight: 800;
+    font-weight: 600;
     text-align: center;
     color: var(--white-color);
     text-transform: capitalize;
@@ -81,7 +81,7 @@
 
 .bold-text {
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--black-color);
     text-align: left;
 
@@ -107,13 +107,18 @@
         height: 40px;
         border-radius: 50%;
         background-color: var(--tertiary-color);
-        margin: 0.25rem 0;
+        margin: 0.3rem 0;
 
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
 
         transition: all 0.3s ease-in-out;
+
+        a{
+            display: flex;
+        }
 
         svg {
             width: 18px;

@@ -42,7 +42,10 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Take a coffee & chat with me</h2>
+      <h2 className="head-text">
+        Need a <span>Frontend Developer?</span> <br /> Let's{" "}
+        <span>Connect!</span>
+      </h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
@@ -67,6 +70,7 @@ const Footer = () => {
               placeholder="Your Name"
               name="username"
               value={username}
+              autoComplete="off"
               onChange={handleChangeInput}
             />
           </div>
@@ -77,6 +81,8 @@ const Footer = () => {
               placeholder="Your Email"
               name="email"
               value={email}
+              required={true}
+              autoComplete="off"
               onChange={handleChangeInput}
             />
           </div>
@@ -94,7 +100,9 @@ const Footer = () => {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
             type="button"
             className="p-text"
-            disabled={true}
+            disabled={
+              username === "" || email === "" || message === "" ? true : false
+            }
             onClick={handleSubmit}
           >
             {!loading ? "Send Message" : "Sending..."}
@@ -102,12 +110,17 @@ const Footer = () => {
         </div>
       ) : (
         <div>
-          <h3 className="head-text">Thank you for getting in touch!</h3>
+          <h3
+            className="head-text"
+            style={{ textAlign: "center", marginTop: 100 }}
+          >
+            Thank you for <span>getting in touch!</span>
+          </h3>
           <p
             className="p-text"
-            style={{ textAlign: "center", marginBlock: 20 }}
+            style={{ textAlign: "center", marginTop: 20, marginBottom: 100 }}
           >
-            I will reply soon 👋
+            Expect a reply soon 👋
           </p>
         </div>
       )}

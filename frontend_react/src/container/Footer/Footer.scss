@@ -98,6 +98,10 @@
         margin: 2rem 0 0 0;
         font-family: var(--font-base);
         cursor: pointer;
+        &:disabled{
+            opacity: .4;
+            cursor: not-allowed;
+        }
     }
     @media screen and (max-width: 768px) {
         width: 100%;

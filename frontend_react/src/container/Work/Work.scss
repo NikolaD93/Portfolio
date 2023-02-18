@@ -106,6 +106,9 @@
     border-radius: 0.5rem;
     opacity: 0;
     transition: all 0.4s ease;
+    @media screen and (max-width: 900px) {
+      background-color: transparent;
+    }
   
     div {
       width: 50px;
@@ -119,6 +122,10 @@
       font-weight: 800;
       cursor: pointer;
       transition: all 0.4s ease;
+
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
   
       svg {
         width: 50%;
@@ -126,6 +133,36 @@
         color: var(--white-color);
       }
     }
+  }
+
+  .app__work-responsive{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    div {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      color: #fff;
+      font-family: var(--font-base);
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      margin-block: .5rem;
+
+      svg {
+        width: 50%;
+        height: 50%;
+        color: var(--white-color);
+      }
+
+      @media screen and (min-width: 901px) {
+        display: none;
+      }
+    }
+
+   
   }
   
   .app__work-content {

@@ -9,7 +9,7 @@ Technologies used:
 
 # [Live Website Preview](https://nikola93portfolio.netlify.app).
 
-# YT Video coming soon! ✌
+# [YT Video Preview](https://www.youtube.com/watch?v=UjPF60jnIN4&t=5s).
 
 ![Nikola-Portfolio](https://user-images.githubusercontent.com/95870159/219866707-26e34a83-4be7-4ee7-af12-9023b7983971.png)
 

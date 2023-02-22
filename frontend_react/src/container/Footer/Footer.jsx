@@ -21,7 +21,8 @@ const Footer = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setLoading(true);
 
     const contact = {
@@ -62,7 +63,7 @@ const Footer = () => {
         </div>
       </div>
       {!isFormSubmitted ? (
-        <div className="app__footer-form app__flex">
+        <form onSubmit={handleSubmit} className="app__footer-form app__flex">
           <div className="app__flex">
             <input
               className="p-text"
@@ -70,6 +71,7 @@ const Footer = () => {
               placeholder="Your Name"
               name="username"
               value={username}
+              required
               autoComplete="off"
               onChange={handleChangeInput}
             />
@@ -81,7 +83,7 @@ const Footer = () => {
               placeholder="Your Email"
               name="email"
               value={email}
-              required={true}
+              required
               autoComplete="off"
               onChange={handleChangeInput}
             />
@@ -92,22 +94,22 @@ const Footer = () => {
               placeholder="Your Message"
               value={message}
               name="message"
+              required
               onChange={handleChangeInput}
             />
           </div>
           <motion.button
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            type="button"
+            type="submit"
             className="p-text"
             disabled={
               username === "" || email === "" || message === "" ? true : false
             }
-            onClick={handleSubmit}
           >
             {!loading ? "Send Message" : "Sending..."}
           </motion.button>
-        </div>
+        </form>
       ) : (
         <div>
           <h3

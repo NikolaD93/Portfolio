@@ -46,7 +46,7 @@
     align-items: center;
   
     .app__work-item {
-      width: 300px;
+      max-width: 350px;
       flex-direction: column;
   
       margin: 2rem;

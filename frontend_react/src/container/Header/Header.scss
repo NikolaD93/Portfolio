@@ -1,10 +1,10 @@
 #home {
     position: relative;
     .app__wrapper {
-    @media screen and (max-width: 500px) {
-        padding: 0;
-    }
-        
+        @media screen and (max-width: 500px) {
+            padding: 0;
+        }
+
         .copyright {
             display: none;
         }
@@ -96,7 +96,6 @@
             @media screen and (min-width: 391px) and (max-width: 620px) {
                 margin-left: 2rem;
             }
-            
         }
         .btn-cmp:nth-child(2) {
             background: transparent;
